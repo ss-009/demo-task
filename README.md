@@ -26,7 +26,6 @@ curl -X POST http://127.0.0.1:8000/analyze \
   -H "Content-Type: application/json" \
   -d '{"image_path": "/image/test.jpg"}'
 
-
 # データベース確認
 docker-compose exec db psql -U myuser -d db
 SELECT * FROM ai_analysis_log;
