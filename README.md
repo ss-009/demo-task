@@ -19,9 +19,7 @@ cp env.example .env
 docker-compose up -d
 
 # テーブル作成
-docker-compose exec web bash
-python -m app.migrations.create_tables
-exit
+docker-compose exec web python -m app.migrations.create_tables
 
 # 動作確認
 curl -X POST http://127.0.0.1:8000/analyze \
@@ -30,17 +28,11 @@ curl -X POST http://127.0.0.1:8000/analyze \
 
 
 # データベース確認
-docker-compose exec db bash
-psql -U myuser -d db
+docker-compose exec db psql -U myuser -d db
 SELECT * FROM ai_analysis_log;
-q
-\q
-exit
 
 # テスト実行
-docker-compose exec web bash
-pytest -v
-exit
+docker-compose exec web pytest -v
 
 # Docker 停止
 docker-compose down
