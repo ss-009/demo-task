@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+SQLAlchemy
+asyncpg
+python-dotenv
+
+# テスト用
+pytest
+pytest-asyncio
+httpx

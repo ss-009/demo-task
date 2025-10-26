@@ -1,0 +1,18 @@
+# キャッシュ
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# 環境設定
+venv/
+.env
+
+# VSCode設定
+.vscode/
+
+# Mac特有
+.DS_Store
+
+# その他
+*.log
