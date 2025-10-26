@@ -27,6 +27,7 @@ async def test_analyze_and_save_api_failure():
     mock_repo = AsyncMock()
     service = AnalysisService(mock_client, mock_repo)
     response = await service.analyze_and_save("/image/test_fail.jpg", session=None)
+    
     assert response.success is False
     assert response.message == "Error:E50012"
     assert isinstance(response.estimated_data, EstimatedData)
