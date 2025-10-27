@@ -18,7 +18,7 @@ class AnalyzeResponse(BaseModel):
         default_factory=EstimatedData, description="解析結果の詳細"
     )
 
-    model_config = ConfigDict(
+    model_config: ConfigDict = ConfigDict(
         json_schema_extra={
             "example": {
                 "success": True,
