@@ -12,7 +12,7 @@ class MockAiAnalysisClient:
                 "message": "success",
                 "estimated_data": {
                     "class": random.randint(1, 5),
-                    "confidence": round(random.uniform(0.0, 0.99), 4),
+                    "confidence": round(random.uniform(0.0, 1.0), 4),
                 },
             }
         else:
