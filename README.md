@@ -1,5 +1,7 @@
 # デモ課題セットアップ手順
 
+課題仕様: [`docs/spec.md`](docs/spec.md)
+
 ## 前提条件
 
 - Docker / Docker Compose がインストールされていること
